@@ -6,7 +6,6 @@ use OAuth\OAuth1\Service\AbstractService;
 use OAuth\OAuth1\Signature\SignatureInterface;
 use OAuth\OAuth1\Token\StdOAuth1Token;
 use OAuth\Common\Http\Exception\TokenResponseException;
-use OAuth\Common\Http\Uri\Uri;
 use OAuth\Common\Consumer\CredentialsInterface;
 use OAuth\Common\Http\Client\ClientInterface;
 use OAuth\OAuth1\Token\TokenInterface;
@@ -31,11 +30,11 @@ class Magento extends AbstractService
     /**
      * Internal constructor
      *
-     * @param OAuth\Common\Consumer\CredentialsInterface $credentials
-     * @param OAuth\Common\Http\Client\ClientInterface $httpClient
-     * @param OAuth\Common\Storage\TokenStorageInterface $storage
-     * @param OAuth\OAuth1\Signature\SignatureInterface $signature
-     * @param OAuth\Common\Http\Uri\UriInterface $baseApiUri
+     * @param CredentialsInterface $credentials
+     * @param ClientInterface $httpClient
+     * @param TokenStorageInterface $storage
+     * @param SignatureInterface $signature
+     * @param UriInterface $baseApiUri
      * @return void
      */
     public function __construct(CredentialsInterface $credentials, ClientInterface $httpClient, TokenStorageInterface $storage, SignatureInterface $signature, UriInterface $baseApiUri = null) 
@@ -52,7 +51,7 @@ class Magento extends AbstractService
     /**
      * Get request token endpoint
      * 
-     * @return OAuth\Common\Http\Uri\Uri
+     * @return UriInterface
      */
     public function getRequestTokenEndpoint()
     {
@@ -85,7 +84,7 @@ class Magento extends AbstractService
     /**
      * Get authorize token endpoint
      *
-     * @return OAuth\Common\Http\Uri\Uri
+     * @return UriInterface
      */
     public function getAuthorizationEndpoint()
     {
@@ -98,7 +97,7 @@ class Magento extends AbstractService
     /**
      * Get access token endpoint
      * 
-     * @return OAuth\Common\Http\Uri\Uri
+     * @return UriInterface
      */
     public function getAccessTokenEndpoint()
     {
@@ -112,7 +111,7 @@ class Magento extends AbstractService
      * Parse request token response
      * 
      * @param string $responseBody
-     * @return OAuth\OAuth1\Token\StdOAuth1Token
+     * @return StdOAuth1Token
      */
     protected function parseRequestTokenResponse($responseBody)
     {
@@ -131,7 +130,7 @@ class Magento extends AbstractService
      * Parse access token response
      * 
      * @param string $responseBody
-     * @return OAuth\OAuth1\Token\StdOAuth1Token
+     * @return StdOAuth1Token
      */
     protected function parseAccessTokenResponse($responseBody)
     {
@@ -187,8 +186,8 @@ class Magento extends AbstractService
      *  - Adds oauth_verifier to auth header for Magento
      * 
      * @param string $method
-     * @param OAuth\Common\Http\Uri\UriInterface $uri
-     * @param OAuth\Common\Storage\TokenStorageInterface $token
+     * @param UriInterface $uri
+     * @param TokenInterface $token
      * @param array $bodyParams
      *
      * @return string
