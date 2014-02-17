@@ -532,12 +532,12 @@ class MagentoTest extends \PHPUnit_Framework_TestCase
     /**
      * Get Magento service instance
      *
-     * @param OAuth\Common\Consumer\CredentialsInterface $credentials
-     * @param OAuth\Common\Http\Client\ClientInterface $httpClient
-     * @param OAuth\Common\Storage\TokenStorageInterface $tokenStorage
-     * @param OAuth\OAuth1\Signature\SignatureInterface $signature
-     * @param OAuth\Common\Http\Uri\Uri $uri
-     * @return JonnyW\MagentoOAuth\Unit\OAuth1\Service\Magento
+     * @param CredentialsInterface $credentials
+     * @param ClientInterface $httpClient
+     * @param TokenStorageInterface $tokenStorage
+     * @param SignatureInterface $signature
+     * @param Uri $uri
+     * @return Magento
      */
     protected function getMagentoService(CredentialsInterface $credentials, ClientInterface $httpClient, TokenStorageInterface $tokenStorage, SignatureInterface $signature, Uri $uri = null)
     {
