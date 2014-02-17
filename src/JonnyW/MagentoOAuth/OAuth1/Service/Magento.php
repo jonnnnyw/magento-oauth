@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of the Magento OAuth package
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 namespace JonnyW\MagentoOAuth\OAuth1\Service;
 
 use OAuth\OAuth1\Service\AbstractService;
