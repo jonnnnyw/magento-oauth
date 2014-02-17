@@ -111,7 +111,7 @@ class Magento extends AbstractService
     /**
      * Parse request token response
      * 
-     * @param array $responseBody
+     * @param string $responseBody
      * @return OAuth\OAuth1\Token\StdOAuth1Token
      */
     protected function parseRequestTokenResponse($responseBody)
@@ -130,7 +130,7 @@ class Magento extends AbstractService
     /**
      * Parse access token response
      * 
-     * @param array $responseBody
+     * @param string $responseBody
      * @return OAuth\OAuth1\Token\StdOAuth1Token
      */
     protected function parseAccessTokenResponse($responseBody)
@@ -163,7 +163,7 @@ class Magento extends AbstractService
      */
     protected function validateTokenResponse($data)
     {
-        if(!is_array($data)) {
+        if(is_null($data) || !is_array($data)) {
             throw new TokenResponseException('Response body is in an invalid format');
         }
 

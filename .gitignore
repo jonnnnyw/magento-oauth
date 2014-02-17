@@ -1,6 +1,7 @@
 .DS_Store
 composer.lock
 test.sh
+docs.sh
 vendor/
 bin/
 

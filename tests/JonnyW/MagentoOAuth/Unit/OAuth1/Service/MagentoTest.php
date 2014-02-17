@@ -37,7 +37,7 @@ class MagentoTest extends \PHPUnit_Framework_TestCase
         $tokenStorage   = $this->getTokenStorage();
         $signature      = $this->getSignature();
         
-        $magento = $this->getMagentoService($credentials, $httpClient, $tokenStorage, $signature, null);
+        $this->getMagentoService($credentials, $httpClient, $tokenStorage, $signature, null);
     }
 
     /**
