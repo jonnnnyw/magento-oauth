@@ -158,7 +158,7 @@ class Magento extends AbstractService
     /**
      * Validate token response
      *
-     * @param array $data
+     * @param array|null $data
      * @return void
      */
     protected function validateTokenResponse($data)
