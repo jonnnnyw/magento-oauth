@@ -1,0 +1,25 @@
+{
+    "name": "jonnyw/magento-oauth",
+    "description": "Magento OAuth Test",
+	"type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+    	"php": ">=5.3.0"
+    },
+    "require": {
+        "lusitanian/oauth": "0.2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "JonnyW\\MagentoOAuth\\": "src"
+        },
+        "classmap": ["src/"]
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
