@@ -1,7 +1,7 @@
 magento-oauth
 =============
 
-A service class for Magento OAuth using the Lusitanian PHP OAuth library.
+A service class for Magento OAuth using the [Lusitanian PHP OAuth](https://github.com/Lusitanian/PHPoAuthLib) library.
 
 
 0.0 Table of Contents

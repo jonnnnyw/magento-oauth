@@ -97,5 +97,5 @@ else {
 
     $url = $currentUri->getRelativeUri() . '?authenticate=true';
     
-    echo '<a href="' . $url . '" title="Login with Twitter">Login with Twitter!</a>';
+    echo '<a href="' . $url . '" title="Authenticate">Authenticate!</a>';
 }
