@@ -3,6 +3,7 @@ magento-oauth
 
 A service class for Magento OAuth using the [Lusitanian PHP OAuth](https://github.com/Lusitanian/PHPoAuthLib) library.
 
+[![Latest Stable Version](https://poser.pugx.org/jonnyw/magento-oauth/v/stable.png)](https://packagist.org/packages/jonnyw/magento-oauth) [![Total Downloads](https://poser.pugx.org/jonnyw/magento-oauth/downloads.png)](https://packagist.org/packages/jonnyw/magento-oauth) [![Latest Unstable Version](https://poser.pugx.org/jonnyw/magento-oauth/v/unstable.png)](https://packagist.org/packages/jonnyw/magento-oauth) [![License](https://poser.pugx.org/jonnyw/magento-oauth/license.png)](https://packagist.org/packages/jonnyw/magento-oauth)[![Build Status](https://travis-ci.org/jonnnnyw/magento-oauth.png?branch=master)](https://travis-ci.org/jonnnnyw/magento-oauth)
 
 0.0 Table of Contents
 ---------------------
