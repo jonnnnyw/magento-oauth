@@ -20,15 +20,15 @@ require_once __DIR__ . '/../vendor/autoload.php';
 /**
  * Consumer credentials
  */
-$applicationUrl		= 'http://magento.local';
-$consumerKey 		= 'd19e5e1ce0a8298a32fafc2d1d50227b';
-$consumerSecret 	= '7c230aba0da67e2ab462f88e6e83ee39';
+$applicationUrl     = 'http://magento.local';
+$consumerKey        = 'd19e5e1ce0a8298a32fafc2d1d50227b';
+$consumerSecret     = '7c230aba0da67e2ab462f88e6e83ee39';
 
 /**
  * Setup service
  */
-$storage 		= new Session();
-$uriFactory 	= new UriFactory();
+$storage        = new Session();
+$uriFactory     = new UriFactory();
 
 $serviceFactory = new ServiceFactory();
 $serviceFactory->registerService('magento', 'JonnyW\MagentoOAuth\OAuth1\Service\Magento');
@@ -55,7 +55,7 @@ $magentoService->setAuthorizationEndpoint(Magento::AUTHORIZATION_ENDPOINT_ADMIN)
 // AUTHENTICATION CANCELLED  //
 // +++++++++++++++++++++++++ //
 if(isset($_GET['rejected'])) {
-	 echo '<p>OAuth authentication was cancelled.</p>';
+     echo '<p>OAuth authentication was cancelled.</p>';
 }
 
 // +++++++++++++++++++++++++ //
@@ -64,8 +64,8 @@ if(isset($_GET['rejected'])) {
 elseif(isset($_GET['authenticate'])) {
 
     // extra request needed for oauth1 to request a request token :-)
-    $token 	= $magentoService->requestRequestToken();
-    $url 	= $magentoService->getAuthorizationUri(array('oauth_token' => $token->getRequestToken()));
+    $token     = $magentoService->requestRequestToken();
+    $url     = $magentoService->getAuthorizationUri(array('oauth_token' => $token->getRequestToken()));
     
     header('Location: ' . $url);
 } 
