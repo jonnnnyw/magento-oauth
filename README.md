@@ -9,6 +9,7 @@ A service class for Magento OAuth using the Lusitanian PHP OAuth library.
 
 * Examples
 * Changelog
+* Troubleshooting
 
 
 1.0 Examples
@@ -64,31 +65,11 @@ $magentoService->setAuthorizationEndpoint(Magento::AUTHORIZATION_ENDPOINT_CUSTOM
 ------------
 
 
-4.0 Troubleshooting
+3.0 Troubleshooting
 ------------
 
-If you are using V1.0.0 then the examples above won't work for you. It is reccommend that you upgrade to the latest version.
+If you receive a 'Server can not understand Accept HTTP header media type' error message when making API requests through the service then you may need to add an 'Accept' header to the request:
 
-Look at the response class (JonnyW\PhantomJs\Response) to see what data you have access to.
-
-An explanation of the errors that are thrown by the client:
-
-### CommandFailedException
-
-The command sent to the PhantomJS executable failed. This should be very rare and is probably my fault if this happens (sorry).
-
-### InvalidUrlException
-
-The URL you are providing is an invalid format. It is very loose verification.
-
-### InvalidMethodException
-
-The request method you are providing is invalid.
-
-### NoPhantomJsException
-
-The PhantomJS executable cannot be found or it is not executable. Check the path and permissions.
-
-### NotWriteableException
-
-The screen capture location you provided or your /tmp folder are not writeable. The /tmp folder is used to temporarily write the scripts that PhantomJS executes. They are deleted after execution or on failure.
+```php
+$result = $magentoService->request('/api/rest/customers', 'GET', null, array('Accept' => '*/*'));
+```
